@@ -1,0 +1,26 @@
+{
+  "name": "developerprofilegenerator",
+  "version": "1.0.0",
+  "description": "Unit 09 Node.js and ES6+ Homework: Developer Profile Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MahirErden/DeveloperProfileGenerator.git"
+  },
+  "keywords": [
+    "profile",
+    "generator"
+  ],
+  "author": "MahirErden",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MahirErden/DeveloperProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/MahirErden/DeveloperProfileGenerator#readme",
+  "dependencies": {
+    "inquirer": "^7.0.1"
+  }
+}
