@@ -1,32 +1,4 @@
-const colors = {
-  indigo_blue: {
-    wrapperBackground: "indigo",
-    headerBackground: "royalblue",
-    headerColor: "white",
-    photoBorderColor: "white"
-  },
-  purple_salmon: {
-    wrapperBackground: "royalblue",
-    headerBackground: "salmon",
-    headerColor: "white",
-    photoBorderColor: "red"
-  },
-  orchid_thistle: {
-    wrapperBackground: "orchid",
-    headerBackground: "thistle",
-    headerColor: "black",
-    photoBorderColor: "slateblue"
-  },
-  gray_ligthgray: {
-    wrapperBackground: "slategray",
-    headerBackground: "lightgray",
-    headerColor: "black",
-    photoBorderColor: "black"
-  }
-};
-
-var generate = function (data) {
-  return `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -44,7 +16,7 @@ var generate = function (data) {
     }
 
     .container {
-      background-color: ${colors[data.color].wrapperBackground};
+      background-color: royalblue;
       z-index: 0;
       height: 150vh;
       width: 800px;
@@ -56,14 +28,14 @@ var generate = function (data) {
 
     .header {
       position: relative;
-      background-color: ${colors[data.color].headerBackground};
+      background-color: salmon;
       width: 96%;
       height: 40%;
       z-index: 5;
       top: 50px;
       margin: auto;
       border-radius: 5px;
-      color: ${colors[data.color].headerColor};
+      color: white;
       text-align: center;
       line-height: 30px;
     }
@@ -82,7 +54,7 @@ var generate = function (data) {
       position: relative;
       top: -70px;
       text-decoration: none;
-      color: ${colors[data.color].headerColor};
+      color: white;
       font-weight: bold;
     }
 
@@ -91,7 +63,7 @@ var generate = function (data) {
       width: 25%;
       top: -40px;
       border: solid 2px;
-      border-color: ${colors[data.color].photoBorderColor};
+      border-color: red;
       border-radius: 50%;
       z-index: 5;
       margin: auto;
@@ -102,7 +74,7 @@ var generate = function (data) {
       top: -50px;
       font-size: 250%;
       line-height: 15px;
-      color: ${colors[data.color].headerColor};
+      color: white;
     }
 
     h2 {
@@ -118,17 +90,17 @@ var generate = function (data) {
       position: relative;
       display: block;
       top: -60px;
-      color: ${colors[data.color].headerColor};
+      color: white;
       font-weight: 700;
       font-size: 160%;
     }
     .card {
       position: relative;
       top: 40px;
-      background-color: ${colors[data.color].headerBackground};;
+      background-color: salmon;;
       width: 320px;
       height: 100px;
-      color: ${colors[data.color].headerColor};
+      color: white;
       font-size: 27px;
       text-align: center;
       border-radius: 6px;
@@ -152,26 +124,26 @@ var generate = function (data) {
 <body>
   <div class="container">
     <div class="header">
-      <img class="photo" src="${data.imgUrl}">
+      <img class="photo" src="https://avatars2.githubusercontent.com/u/29349825?v=4">
       <h1>Hi,</h1>
-      <h1>My Name is <span>${data.name}</span></h1>
-      <h3>${data.currentjob}</h3>
-      <a href="https://www.google.com/maps/place/${data.location}/"><span class="fa fa-map-marker"
-          style="font-size:25px; margin-right: 10px;"></span>${data.location}</a>
-      <a href="https://github.com/${data.githubname}"><span class="fab fa-github-square"
+      <h1>My Name is <span>Mahir Erden</span></h1>
+      <h3>student at UofT Coding Bootcamp</h3>
+      <a href="https://www.google.com/maps/place/Oakville, ON Canada/"><span class="fa fa-map-marker"
+          style="font-size:25px; margin-right: 10px;"></span>Oakville, ON Canada</a>
+      <a href="https://github.com/MahirErden"><span class="fab fa-github-square"
           style="font-size:25px; margin-left: 20px; margin-right: 10px;"></span>GitHub</a>
-      <a href="https://www.linkedin.com/in/${data.linkedin}"><span class="fab fa-linkedin"
+      <a href="https://www.linkedin.com/in/mahirerden"><span class="fab fa-linkedin"
           style="font-size:25px; margin-left: 20px; margin-right: 10px;"></span>LinkedIn</a>
     </div>
     <div class="content">
-      <h2>${data.bio}</h2>
+      <h2>I build full stack web sites</h2>
       <table>
         <tr>
           <td>
             <div class="card">
               <p>
                 Public Repositories
-                ${data.publicRepo}
+                15
               </p>
             </div>
           </td>
@@ -179,7 +151,7 @@ var generate = function (data) {
             <div class="card">
               <p>
                 Followers
-                ${data.followers}
+                3
               </p>  
             </div>
           </td>
@@ -189,7 +161,7 @@ var generate = function (data) {
               <div class="card">
                 <p>
                   GitHub Stars
-                  ${data.starred}
+                  4
                 </p>
               </div>
             </td>
@@ -197,7 +169,7 @@ var generate = function (data) {
               <div class="card">
                 <p>
                   Following
-                  ${data.following}
+                  5
                 </p>
               </div>
             </td>
@@ -208,10 +180,4 @@ var generate = function (data) {
   </div>
 </body>
 
-</html>`
-}
-
-module.exports = {
-  colors: colors,
-  generate: generate
-};
+</html>
